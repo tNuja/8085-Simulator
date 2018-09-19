@@ -1,0 +1,97 @@
+# Project: Project1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o arith.o debug.o display.o execute.o increment.o jc.o jmp.o jnc.o jnz.o jz.o lda.o lhld.o logical.o lxi.o mov.o mvi.o set.o shld.o sta.o updatePc.o validAddress.o validInst.o xchg.o
+LINKOBJ  = main.o arith.o debug.o display.o execute.o increment.o jc.o jmp.o jnc.o jnz.o jz.o lda.o lhld.o logical.o lxi.o mov.o mvi.o set.o shld.o sta.o updatePc.o validAddress.o validInst.o xchg.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 8085_Sim.exe
+CXXFLAGS = $(CXXINCS) -g
+CFLAGS   = $(INCS) -g
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+arith.o: arith.cpp
+	$(CPP) -c arith.cpp -o arith.o $(CXXFLAGS)
+
+debug.o: debug.cpp
+	$(CPP) -c debug.cpp -o debug.o $(CXXFLAGS)
+
+display.o: display.cpp
+	$(CPP) -c display.cpp -o display.o $(CXXFLAGS)
+
+execute.o: execute.cpp
+	$(CPP) -c execute.cpp -o execute.o $(CXXFLAGS)
+
+increment.o: increment.cpp
+	$(CPP) -c increment.cpp -o increment.o $(CXXFLAGS)
+
+jc.o: jc.cpp
+	$(CPP) -c jc.cpp -o jc.o $(CXXFLAGS)
+
+jmp.o: jmp.cpp
+	$(CPP) -c jmp.cpp -o jmp.o $(CXXFLAGS)
+
+jnc.o: jnc.cpp
+	$(CPP) -c jnc.cpp -o jnc.o $(CXXFLAGS)
+
+jnz.o: jnz.cpp
+	$(CPP) -c jnz.cpp -o jnz.o $(CXXFLAGS)
+
+jz.o: jz.cpp
+	$(CPP) -c jz.cpp -o jz.o $(CXXFLAGS)
+
+lda.o: lda.cpp
+	$(CPP) -c lda.cpp -o lda.o $(CXXFLAGS)
+
+lhld.o: lhld.cpp
+	$(CPP) -c lhld.cpp -o lhld.o $(CXXFLAGS)
+
+logical.o: logical.cpp
+	$(CPP) -c logical.cpp -o logical.o $(CXXFLAGS)
+
+lxi.o: lxi.cpp
+	$(CPP) -c lxi.cpp -o lxi.o $(CXXFLAGS)
+
+mov.o: mov.cpp
+	$(CPP) -c mov.cpp -o mov.o $(CXXFLAGS)
+
+mvi.o: mvi.cpp
+	$(CPP) -c mvi.cpp -o mvi.o $(CXXFLAGS)
+
+set.o: set.cpp
+	$(CPP) -c set.cpp -o set.o $(CXXFLAGS)
+
+shld.o: shld.cpp
+	$(CPP) -c shld.cpp -o shld.o $(CXXFLAGS)
+
+sta.o: sta.cpp
+	$(CPP) -c sta.cpp -o sta.o $(CXXFLAGS)
+
+updatePc.o: updatePc.cpp
+	$(CPP) -c updatePc.cpp -o updatePc.o $(CXXFLAGS)
+
+validAddress.o: validAddress.cpp
+	$(CPP) -c validAddress.cpp -o validAddress.o $(CXXFLAGS)
+
+validInst.o: validInst.cpp
+	$(CPP) -c validInst.cpp -o validInst.o $(CXXFLAGS)
+
+xchg.o: xchg.cpp
+	$(CPP) -c xchg.cpp -o xchg.o $(CXXFLAGS)

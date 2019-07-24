@@ -2,17 +2,6 @@
 #include "headers.h"
 #include "methods.h"
 
-// using namespace std;
-
-
-// struct elements
-// {
-//     string pc,start,registers[7];
-//     map<string , string> memory;
-//     int flags[8];
-    
-// };
-
 bool* ToBin(string Hex)
 {
   bool *Ar = new bool[8];
